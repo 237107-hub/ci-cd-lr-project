@@ -1,0 +1,51 @@
+name: Release and Joke
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  release_and_update_readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get Chuck Norris Joke
+        id: joke
+        run: |
+          JOKE=$(curl -s https://api.chucknorris.io/jokes/random | jq -r '.value')
+          echo "CHUCK_JOKE=$JOKE" >> $GITHUB_ENV
+          echo "Стягнув жарт: $JOKE"
+
+      - name: Update README.md
+        run: |
+          echo -e "\n## Latest Release Info" >> README.md
+          echo "- Version: v1.0.${{ github.run_number }}" >> README.md
+          echo "- Chuck Norris Joke: ${{ env.CHUCK_JOKE }}" >> README.md
+          
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "docs: оновлення README з жартом від Чака"
+          git push
+
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v1.0.${{ github.run_number }}
+          release_name: Release v1.0.${{ github.run_number }}
+          body: |
+            Автоматичний реліз.
+            Жарт дня: ${{ env.CHUCK_JOKE }}
+          draft: false
+          prerelease: false
