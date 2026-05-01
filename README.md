@@ -92,3 +92,7 @@ export default defineConfig([
 ## Latest Release Info
 - Version: v1.0.2
 - Chuck Norris Joke: Chuck Norris oncd spent his entire weekend eating Duracell Batteries. He did this so that on Monday he could crap out a fire-developed tank round to fire at the short bus that drives by his house. He then give the bus a roundhouse kick to the face!
+
+## Latest Release Info
+- Version: v1.0.3
+- Chuck Norris Joke: Chuck Norris can skydive into outer space.
