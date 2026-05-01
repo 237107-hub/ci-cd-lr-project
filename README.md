@@ -104,3 +104,7 @@ export default defineConfig([
 ## Latest Release Info
 - Version: v1.0.5
 - Chuck Norris Joke: Jesus could walk on Land. Chuck Norris can swim through land.
+
+## Latest Release Info
+- Version: v1.0.6
+- Chuck Norris Joke: The hills are alive with the sound of Chuck Norris' dong slapping against his legs while he walks.
