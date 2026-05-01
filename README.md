@@ -108,3 +108,7 @@ export default defineConfig([
 ## Latest Release Info
 - Version: v1.0.6
 - Chuck Norris Joke: The hills are alive with the sound of Chuck Norris' dong slapping against his legs while he walks.
+
+## Latest Release Info
+- Version: v1.0.7
+- Chuck Norris Joke: Chuck Norris is older than his own dad.
