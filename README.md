@@ -88,3 +88,7 @@ export default defineConfig([
 ## Latest Release Info
 - Version: v1.0.1
 - Chuck Norris Joke: Mr T once beat Chuck Norris in an arm wrestling match, as an act of retaliation Chuck Norris invented racism.
+
+## Latest Release Info
+- Version: v1.0.2
+- Chuck Norris Joke: Chuck Norris oncd spent his entire weekend eating Duracell Batteries. He did this so that on Monday he could crap out a fire-developed tank round to fire at the short bus that drives by his house. He then give the bus a roundhouse kick to the face!
